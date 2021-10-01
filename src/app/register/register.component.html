@@ -1,0 +1,194 @@
+<div class="containe">
+    <div class="w3-row">
+        <div class="w3-col m4"><h1></h1></div>
+        <div class="w3-col m4">
+            <div class="w3-card page center" style="overflow: scroll;">
+                <h1 style="padding-top: 20px;">Manteio</h1>
+                <h6 style="padding-top: 10px; color: rgb(114, 110, 110);">QuickBooks Online Sign in</h6>
+                <button class="btn btn" style="background-color:rgb(56, 139, 218); color:white">Sign in with Intuit</button>
+                 
+                <!------------>
+                <div class="hr-theme-slash-2" style="color: rgb(233, 228, 228); margin: 10px;">
+                    <div class="hr-line"></div>
+                    <div class="hr-icon" style="background-color: whitesmoke; border-radius: 30%;"><i class="material-icons"
+                        style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">OR</i></div>
+                    <div class="hr-line"></div>
+                  </div>
+                <!------------------------------>
+                <form [formGroup]="requiredForm" novalidate>
+                <div class="form-group form-row align-items-center">
+                    <div class="col-auto">
+                        <!---------------First Name--------------->
+                      <label class="sr-only" for="inlineFormInputGroup">First Name</label>
+                      <div class="input-group mb-2"  style="width: 300px; margin-left: 80px;">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fa fa-user"></i></div>
+                        </div>
+                        <input type="text"
+                         required [(ngModel)]="firstname" name="firstname" class="form-control" 
+                         placeholder="First Name" formControlName="firstname"
+                          title="user">
+                        <!---->
+                        
+                        <!---->
+                      </div>
+                      <div *ngIf="m.firstname.touched && m.firstname.invalid" class="alert alert-danger" 
+                      style="width: 300px; margin-left: 80px;">
+                        <div *ngIf="m.firstname.errors?.required">Please enter First Name</div>
+                        <div *ngIf="m.firstname.errors?.pattern">First name contains only alphabetics and atleast 3 characters</div>
+                      </div>
+                      <!------------Middle Name----------[(ngModel)]="username"-------->
+                      <label class="sr-only" for="inlineFormInputGroup">Middle Name</label>
+                      <div class="input-group mb-2"  style="width: 300px; margin-left: 80px;">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fa fa-user"></i></div>
+                        </div>
+                        <input type="text"  
+                        name="username" class="form-control" 
+                         placeholder="Middle Name">
+                      </div>
+                      <!---->
+                     
+                      <!--------------Last Name--------------------->
+                      <label class="sr-only" for="inlineFormInputGroup">Last Name</label>
+                      <div class="input-group mb-2" style="width: 300px; margin-left: 80px;">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fa fa-user"></i></div>
+                        </div>
+                        <input type="text"  name="password" class="form-control"
+                        [(ngModel)]="lastname"   formControlName="lastname" placeholder="Last Name">
+                      </div>
+                      <!---->
+                      <div *ngIf="m.lastname.touched && m.lastname.invalid" class="alert alert-danger" 
+                      style="width: 300px; margin-left: 80px;">
+                        <div *ngIf="m.lastname.errors?.required">Please enter last Name</div>
+                        <div *ngIf="m.lastname.errors?.pattern">Last name contains only alphabetics and atleast 3 characters</div>
+                      </div>
+                      <!---------------Email-------------------->
+                      <label class="sr-only" for="inlineFormInputGroup"> </label>
+                      <div class="input-group mb-2"  style="width: 300px; margin-left: 80px;">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fa fa-envelope"></i></div>
+                        </div>
+                        <input type="text"   name="username" [(ngModel)]="email"   formControlName="email" 
+                        class="form-control"   placeholder="Email">
+                      </div>
+                      <!---->
+                      <div *ngIf="m.email.touched && m.email.invalid" class="alert alert-danger" 
+                      style="width: 300px; margin-left: 80px;">
+                        <div *ngIf="m.email.errors?.required">Please enter Email</div>
+                        <div *ngIf="m.email.errors?.pattern">Please enter valid email address</div>
+                      </div>
+                       <!------------------Password-------------------------------->
+                       <label class="sr-only" for="inlineFormInputGroup">Password</label>
+                       <div class="input-group mb-2"  style="width: 300px; margin-left: 80px;">
+                         <div class="input-group-prepend">
+                           <div class="input-group-text"><i class="fa fa-lock"></i></div>
+                         </div>
+                         <input type="password"   name="username" class="form-control" [(ngModel)]="password"   formControlName="password" 
+                           placeholder="Password">
+                       </div>
+                       <div *ngIf="m.password.touched && m.password.invalid" class="alert alert-danger" 
+                       style="width: 300px; margin-left: 80px;">
+                         <div *ngIf="m.password.errors?.required">password should be atleast 8 characters with atleast 1 alphabetics 1 numeric value and 1 special character</div>
+                         <div *ngIf="m.password.errors?.pattern">password should be atleast 8 characters with atleast 1 alphabetics 1 numeric value and 1 special character</div>
+                       </div>
+                      <!-------------------Phone No------------------------->
+                      <label class="sr-only" for="inlineFormInputGroup">Phone No:</label>
+                      <div class="input-group mb-2"  style="width: 300px; margin-left: 80px;">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fa fa-phone"></i></div>
+                        </div>
+                        <input type="text"   name="username" class="form-control" [(ngModel)]="phoneno"   formControlName="phoneno" 
+                          placeholder="Phone No">
+                      </div>
+                      <!---->
+                      <div *ngIf="m.phoneno.touched && m.phoneno.invalid" class="alert alert-danger" 
+                      style="width: 300px; margin-left: 80px;">
+                        <div *ngIf="m.phoneno.errors?.required">Please enter phone no</div>
+                        <div *ngIf="m.phoneno.errors?.pattern">Please enter valid 10 digits number</div>
+                      </div>
+                     
+                      <!----------------------Date of Birth------------------------------------>
+                      <label class="sr-only" for="inlineFormInputGroup">Date of Birth</label>
+                      <div class="input-group mb-2"  style="width: 300px; margin-left: 80px;">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fa fa-calendar"></i></div>
+                        </div>
+                        <input type="date"  name="username" class="form-control"   placeholder="Date of Birth">
+                      </div>
+                     
+                      <!-----------------Country-------------------------->
+                      <label class="sr-only" for="inlineFormInputGroup">Country</label>
+                      <div class="input-group mb-2"  style="width: 300px; margin-left: 80px;">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fa fa-globe"></i></div>
+                        </div>
+                        <!--<mat-select-country>
+                        </mat-select-country>-->
+                        <input type="text"   name="username" class="form-control"   placeholder="Country">
+                      </div>
+                      <!--------------------State----------------------------->
+                      <label class="sr-only" for="inlineFormInputGroup">State</label>
+                      <div class="input-group mb-2"  style="width: 300px; margin-left: 80px;">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fas fa-city"></i></div>
+                        </div>
+                        <input type="text"   name="username" class="form-control"   placeholder="State">
+                      </div>
+                      <!-------------City------------------->
+                      <label class="sr-only" for="inlineFormInputGroup">City</label>
+                      <div class="input-group mb-2"  style="width: 300px; margin-left: 80px;">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text"><i class="fas fa-city"></i></div>
+                        </div>
+                        <input type="text"   name="username" class="form-control"   placeholder="City">
+                      </div>
+                       <!-----------------------Address----------------------------------------->
+                       <label class="sr-only" for="inlineFormInputGroup">Address</label>
+                       <div class="input-group mb-2"  style="width: 300px; margin-left: 80px;">
+                         <div class="input-group-prepend">
+                           <div class="input-group-text"><i class="fa fa-home"></i></div>
+                         </div>
+                         <textarea type="text"   name="username" class="form-control"   placeholder="Address"></textarea>
+                       </div>
+                      <!------------------------------->
+                    </div>
+                  </div>
+                </form>
+                <!-------------------------->
+                <!--<div class="form-group" style="height: 50px;">
+                    <i class="fa fa-user icon"></i>
+                    <input type="text" [(ngModel)]="username" name="username" class="fa fa-user icon input-field form-control" 
+                    style="width: 300px; margin-left: 80px;"><br><br>
+                </div>
+                <div class="input-field" style="height: 80px;">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" [(ngModel)]="password" name="password" class="form-control" 
+                    style="width: 300px; margin-left: 80px;"><br><br>
+                </div>-->
+                <button  class="btn btn"
+                style="width: 300px; background-color: rgb(122, 52, 201); color: white;">Register</button><br>
+                <button [routerLink]="['']" class="btn btn" style="color: rgb(172, 102, 199);">Login</button>
+                <a  href="" style="color: rgb(172, 102, 199);">Forgot password?</a> 
+                <h6 
+                style="color: rgb(114, 110, 110);">Simplify your business with <a href="#" style="text-decoration: none; color: rgb(122, 52, 201);">Manteio</a></h6>
+                <i class="fa fa-home" style="padding: 10px;"> <span style="color: rgb(114, 110, 110);"> Home</span></i>
+                <i class="fa fa-user-secret" style="padding: 10px;"><span style="color: rgb(114, 110, 110);"> Privacy</span> </i>
+                <i class="fa fa-handshake-o" style="padding: 10px;"><span style="color: rgb(114, 110, 110);"> Terms</span> </i><br>
+                <hr style="color: rgb(233, 228, 228);">
+                <h5>Follow us</h5>
+                <a   href="#" class="fa fa-linkedin" style="background: #007bb5; color: white; border-radius: 20%;
+                width: 20px; height: 20px; margin-right: 10px;"></a>
+                <a  href="#" class="fa fa-youtube" style="background: #bb0000; color: white; border-radius: 20%;
+                width: 20px; height: 20px;"></a>
+               
+                <p style="font-size: 12px; width: 380px; margin-left: 40px;">Note: Q Apps is a professional networking app ecosystem for SMBs and 
+                  Accountants. You must be a QuickBooks Online user to use Q Apps.</p>
+                <h6 style="color: rgb(114, 110, 110);">Copyright © 2021 Master Corp, USA. All rights reserved</h6>
+            </div>
+        </div>
+        <div class="w3-col m4"><h1></h1></div>
+    </div>
+</div>
+
