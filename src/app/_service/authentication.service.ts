@@ -6,8 +6,8 @@ import { Injectable } from '@angular/core';
 export class AuthenticationService {
 
   userlist=[
-    {username:'sandeep',password:'Abcd@1234'},
-    {username:'srinath',password:'Abcd@1234'}
+    {username:'sandeep@gmail.com',password:'Abcd@1234'},
+    {username:'srinath@gmail.com',password:'Abcd@1234'}
   ]
 
 /*

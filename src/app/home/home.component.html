@@ -49,7 +49,7 @@
                       <!---->
                     </div>
                   </div>
-                </form>
+                
                 <!-------------------------->
                 <!--<div class="form-group" style="height: 50px;">
                     <i class="fa fa-user icon"></i>
@@ -61,8 +61,8 @@
                     <input type="password" [(ngModel)]="password" name="password" class="form-control" 
                     style="width: 300px; margin-left: 80px;"><br><br>
                 </div>-->
-                <button  class="btn btn"
-                style="width: 300px; background-color: rgb(122, 52, 201); color: white;">Login</button><br>
+                <button  class="btn btn" (click)="login()"
+                style="width: 300px; background-color: rgb(122, 52, 201); color: white;">Login</button><br></form>
                 <button [routerLink]="['register']" class="btn btn" style="color: rgb(172, 102, 199);">Register</button>
                 <a  href="" style="color: rgb(172, 102, 199);">Forgot password?</a> 
                 <h6 

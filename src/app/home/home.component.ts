@@ -28,9 +28,9 @@ export class HomeComponent implements OnInit {
   //find,filter,findIndex etc
 //let const 
   login() {
-  const  data= this._auth.userlist.find(c => c.username == this.username && c.password == this.password);
+  const  data= this._auth.userlist.find(c => c.username == this.email && c.password == this.password);
   if(data){
-    this._router.navigate([""])
+    this._router.navigate(["/dashboard"])
   }else{
     alert("Wrong username or password")
   }
