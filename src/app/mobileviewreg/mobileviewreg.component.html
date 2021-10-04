@@ -38,7 +38,7 @@
                         <div *ngIf="m.firstname.errors?.pattern">First name contains only alphabetics and atleast 3 characters</div>
                       </div>
                       <!------------Middle Name----------[(ngModel)]="username"-------->
-                      <label class="sr-only" for="inlineFormInputGroup">Middle Name</label>
+                      <!--<label class="sr-only" for="inlineFormInputGroup">Middle Name</label>
                       <div class="input-group mb-2"  style="width: 200px; margin-left: 80px;">
                         <div class="input-group-prepend">
                           <div class="input-group-text"><i class="fa fa-user"></i></div>
@@ -46,7 +46,7 @@
                         <input type="text"  
                         name="username" class="form-control" 
                          placeholder="Middle Name">
-                      </div>
+                      </div>-->
                       <!---->
                      
                       <!--------------Last Name--------------------->
@@ -109,49 +109,7 @@
                         <div *ngIf="m.phoneno.errors?.pattern">Please enter valid 10 digits number</div>
                       </div>
                      
-                      <!----------------------Date of Birth------------------------------------>
-                      <label class="sr-only" for="inlineFormInputGroup">Date of Birth</label>
-                      <div class="input-group mb-2"  style="width: 200px; margin-left: 80px;">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text"><i class="fa fa-calendar"></i></div>
-                        </div>
-                        <input type="date"  name="username" class="form-control"   placeholder="Date of Birth">
-                      </div>
-                     
-                      <!-----------------Country-------------------------->
-                      <label class="sr-only" for="inlineFormInputGroup">Country</label>
-                      <div class="input-group mb-2"  style="width: 200px; margin-left: 80px;">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text"><i class="fa fa-globe"></i></div>
-                        </div>
-                        <!--<mat-select-country>
-                        </mat-select-country>-->
-                        <input type="text"   name="username" class="form-control"   placeholder="Country">
-                      </div>
-                      <!--------------------State----------------------------->
-                      <label class="sr-only" for="inlineFormInputGroup">State</label>
-                      <div class="input-group mb-2"  style="width: 200px; margin-left: 80px;">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text"><i class="fas fa-city"></i></div>
-                        </div>
-                        <input type="text"   name="username" class="form-control"   placeholder="State">
-                      </div>
-                      <!-------------City------------------->
-                      <label class="sr-only" for="inlineFormInputGroup">City</label>
-                      <div class="input-group mb-2"  style="width: 200px; margin-left: 80px;">
-                        <div class="input-group-prepend">
-                          <div class="input-group-text"><i class="fas fa-city"></i></div>
-                        </div>
-                        <input type="text"   name="username" class="form-control"   placeholder="City">
-                      </div>
-                       <!-----------------------Address----------------------------------------->
-                       <label class="sr-only" for="inlineFormInputGroup">Address</label>
-                       <div class="input-group mb-2"  style="width: 200px; margin-left: 80px;">
-                         <div class="input-group-prepend">
-                           <div class="input-group-text"><i class="fa fa-home"></i></div>
-                         </div>
-                         <textarea type="text"   name="username" class="form-control"   placeholder="Address"></textarea>
-                       </div>
+                      
                       <!------------------------------->
                     </div>
                   </div>
