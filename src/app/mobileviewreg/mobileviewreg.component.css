@@ -1,0 +1,36 @@
+.containe{
+    background-color: rgb(122, 52, 201);
+    width: 360px;
+    height: 657px;
+}
+.page{
+    margin-top: 25px;
+    background-color: white;
+    width: 360px;
+    height: 600px;
+}
+.center{
+    text-align: center;
+}
+.youtube{
+    background: #007bb5;
+    color: white;
+}
+.linkedin {
+    background: #007bb5;
+    color: white;
+}
+.hr-theme-slash-2 {
+    display: flex;
+  }
+  .hr-line {
+    width: 100%;
+    position: relative;
+    margin: 6px;
+    border-bottom: 1px solid rgb(237, 230, 230);
+  }
+  .hr-icon {
+    position: relative;
+    top: 3px;
+    color: #433e3e;
+  }

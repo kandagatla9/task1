@@ -11,13 +11,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AuthenticationService } from './_service/authentication.service';
 import { RegisterComponent } from './register/register.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MobileviewComponent } from './mobileview/mobileview.component';
+import { MobileviewregComponent } from './mobileviewreg/mobileviewreg.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     DashboardComponent,
-    RegisterComponent
+    RegisterComponent,
+    MobileviewComponent,
+    MobileviewregComponent
   ],
   imports: [
     BrowserModule,
