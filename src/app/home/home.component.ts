@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../_service/authentication.service';
 
@@ -10,13 +11,20 @@ import { AuthenticationService } from '../_service/authentication.service';
 export class HomeComponent implements OnInit {
   username: string;
   password: string;
+  email:any;
 
-  constructor(private _auth: AuthenticationService, private _router: Router) {
-    if (this._auth.userlist) {
-      this._router.navigate(['']);
-    }
+  requiredForm: FormGroup;
+  constructor(private fb: FormBuilder,
+    private _auth: AuthenticationService, private _router: Router) {
+    this.requiredForm = fb.group({
+      email: ['', [Validators.required, Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
+      password: ['', [Validators.required, Validators.pattern('(?=.*[A-Za-z])(?=.*[0-9])(?=.*[$@$!#^~%*?&,.<>"\'\\;:\{\\\}\\\[\\\]\\\|\\\+\\\-\\\=\\\_\\\)\\\(\\\)\\\`\\\/\\\\\\]])[A-Za-z0-9\d$@].{7,}')]],
+    })
   }
 
+  get m() {
+    return this.requiredForm.controls;
+  }
   //find,filter,findIndex etc
 //let const 
   login() {
